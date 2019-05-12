@@ -14,18 +14,18 @@ test('Reverse reverses a string', () => {
 
 
 
-test('Reverse reverses a string', () => {
-  //Arrange
-  let str = 'abcd';
-  let expectedStr = 'dcba';
-  let reversedStr;
+// test('Reverse reverses a string', () => {
+//   //Arrange
+//   let str = 'abcd';
+//   let expectedStr = 'dcba';
+//   let reversedStr;
 
-  //Act
-  reversedStr = reverse(str);
+//   //Act
+//   reversedStr = reverse(str);
 
-  //Assert
-  expect(reversedStr).toEqual(expectedStr);
-});
+//   //Assert
+//   expect(reversedStr).toEqual(expectedStr);
+// });
 
 
 //Extra
