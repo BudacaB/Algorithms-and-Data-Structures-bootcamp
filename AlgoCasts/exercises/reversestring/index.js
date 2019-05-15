@@ -19,9 +19,24 @@
 // }
 
 //Solution #3
+// function reverse(str) {
+//     return str.split('').reduce((rev, char) => char + rev, '');
+// }
+
+
+
+//Solution #2
 function reverse(str) {
-    return str.split('').reduce((rev, char) => char + rev, '');
+    let reversed = '';
+    for (let character of str) {
+        reversed = character + reversed;
+        debugger;
+    }
+    return reversed;
 }
+
+reverse('asdf')
+
 
 
 module.exports = reverse;
