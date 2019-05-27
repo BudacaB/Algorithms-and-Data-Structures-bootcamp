@@ -6,13 +6,33 @@
 // maxChar("apple 1231111") === "1"
 
 function maxChar(str) {
-    const chars = {};
-    for (let char of str) {
-        //!chars[char] ? chars[char] = 1 : chars[char]++;
-        chars[char] = chars[char] + 1 || 1; // course approach
+    const charMap = {};
+    //course solution
+    let max = 0;
+    let maxChar = '';
+
+    for (let char of str) { // remember helper: starts with 'o' but not iterating over an object - using 'of'
+        //!charMap[char] ? charMap[char] = 1 : charMap[char]++;
+        //charMap[char] = charMap[char] + 1 || 1; // course approach
+        //course approach 2
+        if (charMap[char]){
+          charMap[char]++;
+        } else {
+          charMap[char] = 1;
+        }
       };
       
-      return Object.keys(chars).reduce((a, b) => chars[a] > chars[b] ? a : b);
+      //return Object.keys(charMap).reduce((a, b) => charMap[a] > charMap[b] ? a : b);
+
+      //course solution
+      for (let char in charMap) { // iterating over an object - using 'in'
+        if (charMap[char] > max) {
+          max = charMap[char];
+          maxChar = char;
+        }
+      }
+
+      return maxChar;
 }
 
 module.exports = maxChar;
