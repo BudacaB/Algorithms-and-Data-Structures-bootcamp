@@ -17,18 +17,35 @@
 //       '### '
 //       '####'
 
-// own solution
-function steps(n) {
-    let arr = []
+// own solutioncd
+// function steps(n) {
+//     let arr = []
 
-    for (i = 0; i < n; i++) {
-      arr.push(' ')
-    }
+//     for (i = 0; i < n; i++) {
+//       arr.push(' ')
+//     }
   
-    for (i = 0; i < n; i++) {
-      arr[i] = '#'
-      console.log(arr.join(''))
+//     for (i = 0; i < n; i++) {
+//       arr[i] = '#'
+//       console.log(arr.join(''))
+//     }
+// }
+
+
+// course solution #1
+function steps(n) {
+  for (let row = 0; row < n; row++) {
+    let stair = '';
+
+    for (let col = 0; col < n; col++) {
+      if (col <= row) {
+        stair += '#';
+      } else {
+        stair += ' ';
+      }
     }
+    console.log(stair);
+  }
 }
 
 module.exports = steps;
